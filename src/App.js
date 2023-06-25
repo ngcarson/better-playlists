@@ -1,18 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import { render } from '@testing-library/react';
 
-let defaultTextColor = '#fff'
 let defaultStyle = {
-  color: defaultTextColor
+  color: '#fff'
 };
 
 class Aggregate extends Component {
   render() {
     return (
       <div style={{...defaultStyle, width: "40%", display: 'inline-block'}}>
-        <h2 style={{color: defaultTextColor}}>Number Text</h2>
+        <h2>Number Text</h2>
       </div>
     );
   }
@@ -21,10 +18,9 @@ class Aggregate extends Component {
 class Filter extends Component {
   render() {
     return (
-      <div style={{color: defaultTextColor}}>
+      <div>
         <img></img>
-        <input type="text"></input>
-        Filter
+        <input type="text"/>
       </div>
     )
   }
@@ -43,12 +39,9 @@ class Playlist extends Component {
 }
 
 function App() {
-  let name = 'Carson'
-  let green = '#FF1212'
-  let headerStyle = { color: green, 'font-size': '50px' }
   return (
     <div className="App">
-      <h1>Title</h1>
+      <h1 style={{...defaultStyle, 'font-size': '54px'}}>Title</h1>
       <Aggregate/>
       <Aggregate/>
       <Filter/>
